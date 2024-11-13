@@ -1,0 +1,394 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+:root {
+    --Off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.container img {
+    width: 40%;
+}
+
+.header .nav-home-page {
+    display: flex;
+}
+
+.nav-home-page li {
+    position: relative;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    padding: 20px;
+    color: hsl(233, 8%, 79%);
+    font-size: 15px;
+}
+
+li a:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.nav-home-page .trade-nowadays {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    z-index: 88;
+    width: 170px;
+    background-color: hsl(240, 100%, 5%);
+    border-radius: 8px; 
+    display: none;
+}
+
+.trade-nowadays .invest {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.about-trend:hover .trade-nowadays {
+    display: block;
+}
+
+.trade-nowadays .invest:hover {
+    padding-left: 15px;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border-radius: 8px;
+}
+
+
+.group-page .icon {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .group-page .icon {
+        display: block;
+        width: 65%;
+    }
+
+    
+    .header {
+        padding: 20px;
+    }
+
+    .header .head-img {
+        width: 11%;
+    }
+
+
+    .header .nav-home-page {
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* top: 8%; */
+        background-color: white;
+        display: none;
+    }
+
+    .nav-home-page li {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-home-page .about-trend .trade-nowadays {
+        position: relative;
+        width: 100%;
+    }
+
+    .group-page:hover .nav-home-page {
+        display: block;
+    }
+
+    .nav-home-page li a:hover {
+        color: hsl(35, 77%, 62%);
+    }
+
+}
+
+.grid-home-page .the-top-page {
+    width: 73%;
+    display: grid;
+    grid-template-columns: 70% auto;
+    gap: 16px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+@media (max-width: 375px) {
+    .grid-home-page .the-top-page {
+        display: block;
+    }
+}
+
+.first-inside .img {
+    background-image: url("../assets/images/image-web-3-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 3%;
+}
+
+
+@media (max-width: 375px) {
+    .first-inside .img {
+        background-image: url("../assets/images/image-web-3-mobile.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 124%;
+        height: 323px;
+        margin-bottom: 6%;
+        margin-left: -18px;
+    }
+}
+
+.the-top-page .first-inside .flex-txt-bottom {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+
+@media (max-width: 375px) {
+    .the-top-page .first-inside .flex-txt-bottom {
+        display: block;
+    }
+}
+
+.flex-txt-bottom .left-bottom {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+}
+
+@media (max-width: 375px) {
+    .flex-txt-bottom .left-bottom {
+        font-size: 37px;
+        width: 281px;
+        margin-left: -8%;
+    }
+}
+
+.right-bottom {
+    margin-right: 5%;
+}
+
+@media (max-width: 375px) {
+    .right-bottom {
+        margin-bottom: 20%;
+    }
+}
+
+.flex-txt-bottom .right-bottom p {
+    font-size: 14px;
+    width: 297px;
+    line-height: 30px;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 13%;
+}
+
+@media (max-width: 375px) {
+    .flex-txt-bottom .right-bottom p {
+        line-height: 26px;
+        margin-left: -10%;
+        font-size: 15px;
+        width: 330px;
+        margin-bottom: 7%;
+    }
+}
+
+.flex-txt-bottom .right-bottom .bottom {
+    width: 161px;
+    height: 46px;
+    background-color: hsl(5, 85%, 63%);
+    text-transform: uppercase;
+    font-size: 13px;
+    color: white;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 375px) {
+    .flex-txt-bottom .right-bottom .botton {
+        margin-left: -10%;
+        width: 170px;
+    }
+}
+
+
+.the-top-page .second-page {
+    background-color: var(--Very-dark-blue);
+    width: 365px;
+}
+
+@media (max-width: 375px) {
+    .the-top-page .second-page {
+        margin-left: -11%;
+        width: 328px;
+    }
+}
+
+.second-page h2 {
+    color: hsl(35, 77%, 62%);
+    margin-left: 8%;
+    font-size: 41px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 375px) {
+    .second-page h2 {
+        font-size: 30px;
+        padding-top: 13px;
+    }
+}
+
+.second-page article {
+    margin-bottom: 23px;
+    width: 314px;
+    padding: 0 5px;
+    margin-left: 8%;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 375px) {
+    .second-page article {
+        margin-left: 8%;
+        width: 287px;
+    } 
+}
+
+.second-page article:not(:last-child) {
+    border-bottom: 1px solid hsl(233deg 6% 54% / 56%);
+}
+
+article h3 {
+    color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 375px) {
+    article h3 {
+        font-size: 18px;
+    }
+}
+
+
+article p {
+    color: var(--grayish-blue);
+    font-size: 15px;
+    line-height: 27px;
+}
+
+@media (max-width: 375px) {
+    article p {
+        font-size: 14px;
+    }
+}
+
+.the-bottom-page {
+    width: 81%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media (max-width: 375px) {
+    .the-bottom-page {
+        display: block;
+        margin-left: 3%;
+    }
+}
+
+.the-bottom-page .pc ,
+.the-bottom-page .lap-img,
+.the-bottom-page .gam-img {
+    display: flex;
+    align-items: center;
+}
+
+.the-bottom-page .pc img ,
+.the-bottom-page .lap-img img,
+.the-bottom-page .gam-img img {
+    width: 29%;
+    margin-right: 5%;
+}
+
+.the-bottom-page .pc-left-side h3 ,
+.the-bottom-page .laptop h3 ,
+.the-bottom-page .gaming h3 {
+    font-size: 27px;
+    color: var(--grayish-blue);
+    margin-bottom: 13px;
+}
+
+.pc-left-side .heading-pc ,
+.laptop .heading-lap ,
+.gaming .heading-gaming {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+.pc-left-side p ,
+.laptop p ,
+.gaming p {
+    font-size: 13px;
+    color: var(--Dark-grayish-blue);
+    width: 186px;
+    line-height: 25px;
+}
+
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800
